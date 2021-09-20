@@ -28,34 +28,20 @@
                 <img src="img/logo (1).png" alt="logo">
             </div>
             <div class="add-to-todo-list">
-                <input  type="text" placeholder="Nuovo todo">
-                <button>Aggiungi</button>
+                <input v-model ="newToDoThing" type="text" placeholder="Nuovo todo">
+                <button v-on:click="addNewTodo()">Aggiungi</button>
             </div>
         </header>
 
         <main>
             <div class="to-do-list">
                 <ul>
-                    <li>
+                    <li v-for = "todo in todoList">
                         <div class="row-of-todo-list">
-                            <span>cosa da fare test</span>
+                            <span>{{todo}}</span>
                             <i class="fas fa-times"></i>
                         </div>
                     </li>
-                    <li>
-                        <div class="row-of-todo-list">
-                            <span>cosa da fare test</span>
-                            <i class="fas fa-times"></i>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row-of-todo-list">
-                            <span>cosa da fare test</span>
-                            <i class="fas fa-times"></i>
-                        </div>
-                    </li>
-
-
                 </ul>
 
             </div>
