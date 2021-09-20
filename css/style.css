@@ -39,6 +39,12 @@
      background-color: rgba(197, 221, 184, 0.342);
      margin-top: 50px;
      border-radius: 10px;
+     text-align: center;
+ }
+
+ .to-do-list h3{
+     font-weight: 300;
+     padding: 5px 0;
  }
  .to-do-list ul{
      list-style: none;
@@ -57,4 +63,18 @@
  .row-of-todo-list{
      display: flex;
      justify-content: space-between;
+ }
+
+ .complet-it{
+     color: crimson;
+     cursor: pointer;
+ }
+
+.completed{
+    color: rgb(12, 211, 88);
+    text-decoration: line-through;
+ }
+
+ .btnCompleted{
+    color: rgb(12, 211, 88);
  }

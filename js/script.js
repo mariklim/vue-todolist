@@ -4,7 +4,9 @@ var app = new Vue({
       todoList:[
         ],
        newToDoThing:"",
+       isActive : false,
     },
+
     methods: {
         addNewTodo: function(){
             if(this.newToDoThing !== ""){
@@ -12,9 +14,15 @@ var app = new Vue({
                 this.newToDoThing = "";
             }
         },
-        removeTodo: function(index){
-            this.todoList.splice(index, 1);
+        
+        // nel html "indexTodo" segnato come "index"
+        removeTodo: function(indexTodo ){
+            this.todoList.splice(indexTodo, 1);
         },
+
+        btnCompletIt: function(indexTodo){
+            this.isActive = true;
+        }
        
     },
 })

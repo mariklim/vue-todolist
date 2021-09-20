@@ -35,14 +35,19 @@
 
         <main>
             <div class="to-do-list">
-                <ul>
-                    <li v-for = "(todo,index) in todoList":key ="index">
+                <ul v-if="todoList.length > 0">
+                    <li v-for = "(todo,index) in todoList":key ="index" v-bind:class = "{completed:isActive}" >
                         <div class="row-of-todo-list">
-                            <span>{{todo}}</span>
+                            <span >
+                                {{todo}}
+                                <i class="far fa-check-circle complet-it" v-on:click="btnCompletIt(index)"  v-bind:class = "{btnCompleted:isActive}" ></i>
+                            </span>
                             <i class="fas fa-times" v-on:click="removeTodo(index)"></i>
                         </div>
                     </li>
+                   
                 </ul>
+                <h3 v-else>Aggiungi un copito per iniziare...</h3>
 
             </div>
 
