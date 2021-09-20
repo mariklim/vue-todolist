@@ -7,7 +7,15 @@ var app = new Vue({
     },
     methods: {
         addNewTodo: function(){
-            this.todoList.push(this.newToDoThing)
-        }
+            if(this.newToDoThing !== ""){
+                this.todoList.push(this.newToDoThing)
+                this.newToDoThing = "";
+            }
+        },
+        removeTodo: function(index){
+            this.todoList.splice(index, 1);
+        },
+       
     },
 })
+

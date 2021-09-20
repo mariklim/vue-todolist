@@ -36,10 +36,10 @@
         <main>
             <div class="to-do-list">
                 <ul>
-                    <li v-for = "todo in todoList">
+                    <li v-for = "(todo,index) in todoList":key ="index">
                         <div class="row-of-todo-list">
                             <span>{{todo}}</span>
-                            <i class="fas fa-times"></i>
+                            <i class="fas fa-times" v-on:click="removeTodo(index)"></i>
                         </div>
                     </li>
                 </ul>
