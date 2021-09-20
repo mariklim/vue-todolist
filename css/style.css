@@ -1,0 +1,60 @@
+ *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+ }
+
+ /* common */
+ body{
+     font-family: 'Lato', sans-serif;
+ }
+.container{
+    width: 70%;
+    margin: auto;
+}
+/* Header */
+ header{
+     text-align: center;
+     margin-top: 25px;
+ }
+
+.logo img{
+     width: 200px;
+ }
+
+ .add-to-todo-list input, .add-to-todo-list button{
+     padding: 8px;
+     border-radius: 10px;
+     border: 1px solid rgba(197, 221, 184, 0.733);
+     margin: 8px;
+ }
+
+ .add-to-todo-list button{
+    background-color:rgba(197, 221, 184, 0.342);
+}
+
+ /* main */
+ .to-do-list{
+     background-color: rgba(197, 221, 184, 0.342);
+     margin-top: 70px;
+     border-radius: 10px;
+ }
+ .to-do-list ul{
+     list-style: none;
+ }
+
+ .to-do-list ul li{
+     border-bottom: 1px solid rgba(197, 221, 184, 0.733);
+     padding: 10px;
+     margin: 0 15px;
+     font-weight: 400;
+ }
+ .to-do-list ul li:last-child{
+    border-bottom: none;
+ }
+
+ .row-of-todo-list{
+     display: flex;
+     justify-content: space-between;
+ }
