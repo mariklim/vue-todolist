@@ -5,6 +5,7 @@ var app = new Vue({
         ],
        newToDoThing:"",
        isActive : false,
+       todoListCompleted:[],
     },
 
     methods: {
@@ -21,8 +22,9 @@ var app = new Vue({
         },
 
         btnCompletIt: function(indexTodo){
-            this.isActive = true;
-        }
+              console.log(this.btnCompletIt)
+            }
+        
        
     },
 })
