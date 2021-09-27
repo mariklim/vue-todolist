@@ -64,17 +64,16 @@
      display: flex;
      justify-content: space-between;
  }
-
- .complet-it{
-     color: crimson;
-     cursor: pointer;
+ .noActive{
+     color:red;
  }
+ .to-do-list ul li.active span {
+	color: green;
+	text-decoration: line-through;
+}
 
-.completed{
-    color: rgb(12, 211, 88);
-    text-decoration: line-through;
- }
-
- .btnCompleted{
-    color: rgb(12, 211, 88);
- }
+.to-do-list ul li.active span i {
+	color: green;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}

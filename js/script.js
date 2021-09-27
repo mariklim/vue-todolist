@@ -2,16 +2,29 @@ var app = new Vue({
     el: '#root',
     data: {
       todoList:[
+        {
+            name: "Fare i compiti",
+            done: true
+        },
+        {
+            name: "Fare la spesa",
+            done: false
+        },
+        {
+            name: "Fare il bucato",
+            done: true
+        }
         ],
        newToDoThing:"",
-       isActive : false,
-       todoListCompleted:[],
     },
 
     methods: {
         addNewTodo: function(){
             if(this.newToDoThing !== ""){
-                this.todoList.push(this.newToDoThing)
+                this.todoList.push({
+					name: this.newToDoThing,
+					done: false
+				});
                 this.newToDoThing = "";
             }
         },
@@ -20,12 +33,6 @@ var app = new Vue({
         removeTodo: function(indexTodo ){
             this.todoList.splice(indexTodo, 1);
         },
-
-        btnCompletIt: function(indexTodo){
-              console.log(this.btnCompletIt)
-            }
-        
-       
     },
 })
 

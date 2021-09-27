@@ -36,18 +36,24 @@
         <main>
             <div class="to-do-list">
                 <ul v-if="todoList.length > 0">
-                    <li v-for = "(todo,index) in todoList":key ="index" v-bind:class = "{completed:isActive}" >
+                    <li v-for = "(todo,index) in todoList":key ="index" :class="{active: todo.done}" >
                         <div class="row-of-todo-list">
-                            <span >
-                                {{todo}}
-                                <i class="far fa-check-circle complet-it" v-on:click="btnCompletIt(index)"  v-bind:class = "{btnCompleted:isActive}" ></i>
+                            <span>
+                                <i class="far fa-check-circle noActive" :class="{active: todo.done}"
+                                   @click="todo.done = true" >
+                                <!-- se aggiungo |v-if="todo.done == false"| prima del @click, btn di done "far fa-check-circle" scompare se compito è fatto-->
+                            </i>
+                            </span>
+                           <span>{{todo.name}}
+                                
+                                    
                             </span>
                             <i class="fas fa-times" v-on:click="removeTodo(index)"></i>
                         </div>
                     </li>
                    
                 </ul>
-                <h3 v-else>Aggiungi un copito per iniziare...</h3>
+                <h3 v-else>Aggiungi un compito per iniziare...</h3>
 
             </div>
 
